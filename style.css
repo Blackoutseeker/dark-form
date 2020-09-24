@@ -1,0 +1,136 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#questions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contents {
+    position: relative;
+    background-color: #191919;
+    width: 60%;
+    height: 250px;
+    margin: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#name-camp {
+    height: 150px;
+}
+input {
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    height: 40px;
+    width: 60%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #999;
+    transition: .3s;
+    color: #999;
+    font-size: 19pt;
+    z-index: 1;
+}
+input:focus {
+    color: #fff;
+}
+#name:hover {
+    background-color: transparent;
+}
+#label-holder {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    color: #999;
+    font-size: 19pt;
+    transition: .3s;
+}
+#name-camp input:focus ~ #label-holder,
+#name-camp input:valid ~ #label-holder {
+    color: #fff;
+    font-size: 14pt;
+    transform: translateY(-40px);
+}
+.contents input:focus ~ #label-holder,
+.contents input:valid ~ #label-holder {
+    color: #fff;
+    font-size: 14pt;
+    transform: translateY(-40px);
+}
+.errors {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 12pt;
+    color: #cc0000;
+}
+.error-ungranted {
+    visibility: hidden;
+}
+.error-granted {
+    visibility: visible;
+}
+.underline {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    height: 2px;
+    width: 0px;
+    background-color: #0066ff;
+    z-index: 1;
+    transition: .7s;
+}
+.contents input:focus ~ .underline {
+    width: 60.5%;
+}
+.contents input:valid ~ .underline {
+    width: 60.5%;
+    background-color: #49eb34;
+}
+.asks {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: #fff;
+    font-size: 18pt;
+    width: 60%;
+}
+button {
+    height: 90px;
+    width: 250px;
+    background-color: transparent;
+    border: 5px solid #0066ff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    margin-bottom: 30px;
+    transition: .3s;
+    cursor: pointer;
+}
+#send {
+    color: #0066ff;
+    font-size: 25pt;
+    transition: .3s;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0066ff;
+}
+button:hover > #send {
+    color: #121212;
+}
